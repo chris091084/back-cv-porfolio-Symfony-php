@@ -15,8 +15,11 @@ class UserController extends AbstractController
     #[Route('/user', name: 'user', methods:"POST")]
     public function NewUser (Request $request, SerializerInterface $serializer): Response
     {
+        //$normalizers = [new ObjectNormalizer()];
+        //$serializer = new Serializer($normalizers);
 
         $dataRow = $request->getContent();
+
         $data = $serializer->deserialize($dataRow, User::class, 'json');
         $em = $this->getDoctrine()->getManager();
         $em->persist($data);
