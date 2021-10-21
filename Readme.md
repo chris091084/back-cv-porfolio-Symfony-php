@@ -16,3 +16,5 @@ Go to .env.local to modify:
 `CORS_ALLOW_ORIGIN='^https?://(localhost:8100' `<br>
 Put the right url server from the front part
 
+
+_Symfony Version 5.3.9_
